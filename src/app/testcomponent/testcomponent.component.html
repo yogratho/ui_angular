@@ -1,0 +1,37 @@
+<div align="center" *ngIf="false; then thenBlock; else elseBlock" ></div>
+
+    <ng-template #thenBlock>
+
+        <h2>If block</h2>
+    </ng-template>
+    <ng-template #elseBlock>
+
+            <h2>else block</h2>
+        </ng-template>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchCase="'green'">You picked green color</div>
+    <div *ngSwitchDefault>Default Case</div>
+   
+</div>
+<div>
+<h2>{{" hello " +namedis}}</h2>
+<h2>{{"Name in Lower Case -"+namedis | lowercase}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date |date:'short'}}</h2>
+<button (click)="myEvent()">Send Button</button>
+</div>
+<div *ngFor="let colors of colorsnew">
+    <h2>{{colors}}</h2>
+</div>
+<div>
+<h2>Trainers List</h2>
+<ul *ngFor="let employee of trainers">
+<li>{{employee.Name}}</li>
+
+</ul>
+
+</div>
+
+
